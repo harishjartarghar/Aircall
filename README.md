@@ -16,3 +16,6 @@
 - Have used eslint for better code linting.
 - Have made webpack and babelrc changes based on need.
 - Have broken down the component into atoms, molecules and organisms.
+
+![Feed List](https://github.com/harishjartarghar/Aircall/blob/main/Screenshot%202024-01-05%20at%201.37.52%20AM.png?raw=true)
+
