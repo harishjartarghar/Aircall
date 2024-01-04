@@ -1,7 +1,7 @@
 import React from 'react';
 import cx from 'classnames';
 
-import styles from './ExpandedCardDetails.module.scss';
+import styles from './expandedCardDetails.module.scss';
 
 const ExpandedCardDetails = ({ from, to, duration, direction, created_at, onArchiveClick }) => {
   const date1 = new Date(created_at);
