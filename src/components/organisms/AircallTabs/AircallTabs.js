@@ -1,10 +1,11 @@
 import React, { useState } from 'react';
 import cx from 'classnames';
 
-import styles from './aircallTabs.module.scss';
-import AircallBody from '../AircallBody';
 import { useAircallMetadata } from '@/hooks/useAircall';
 import ArchiveButton from '@/components/molecules/ArchiveButton';
+
+import styles from './aircallTabs.module.scss';
+import AircallBody from '../AircallBody';
 import {
   AIRCALL_TOGGLE_REQUEST,
   AIRCALL_TOGGLE_REQUEST_RESET
@@ -13,6 +14,7 @@ import {
 const AircallTabs = () => {
   const { handleResetCallDetails, handleReset, handleArchiveAll } = useAircallMetadata();
 
+  //TODO:move to constants
   const tabs = [
     {
       label: 'Inbox',
@@ -26,6 +28,7 @@ const AircallTabs = () => {
     }
   ];
 
+  //TODO:move to configs
   const tabsConfig = {
     inbox: {
       isArchived: false,

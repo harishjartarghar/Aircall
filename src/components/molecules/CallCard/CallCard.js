@@ -1,7 +1,6 @@
 import React from 'react';
 import cx from 'classnames';
 
-import styles from './callCard.module.scss';
 import {
   CALL_BOUNDING_TYPE_IMAGES,
   CALL_TYPES_BORDER_STYLES,
@@ -9,6 +8,8 @@ import {
   CALL_TYPES_LABELS_STYLES
 } from './callCard.constants';
 import ExpandedCardDetails from '../ExpandedCardDetails';
+
+import styles from './callCard.module.scss';
 
 const CallCard = (props) => {
   const { call_type, direction, from, duration, created_at, onClick, selected } = props;

@@ -1,10 +1,13 @@
-import React, { useState } from 'react';
-import useAircall, { useAircallMetadata } from '@/hooks/useAircall';
+import React from 'react';
+import { useAircallMetadata } from '@/hooks/useAircall';
+
 import CallCard from '@/components/molecules/CallCard';
+import Loader from '@/components/atoms/Loader';
+import NoResultScreen from '@/components/molecules/NoResultScreen';
+
+import { AIRCALL_TOGGLE_REQUEST } from '@/base/constants/apis.constants';
 
 import styles from './aircallBody.module.scss';
-import { AIRCALL_TOGGLE_REQUEST } from '@/base/constants/apis.constants';
-import Loader from '@/components/atoms/Loader';
 
 const AircallBody = ({ isArchived }) => {
   const {
@@ -16,7 +19,9 @@ const AircallBody = ({ isArchived }) => {
     isFetching
   } = useAircallMetadata();
 
-  if (isFetching || !calls || calls.length <= 0) return <Loader />;
+  if (isFetching) return <Loader />;
+
+  if (!calls || !calls.length) return <NoResultScreen />;
 
   return (
     <div className={styles.container}>
