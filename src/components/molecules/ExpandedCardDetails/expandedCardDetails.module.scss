@@ -1,0 +1,44 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    animation: expand 1s ease;
+    height: 6.25rem;
+    background-color: rgba(0, 0, 0, .1215686275);
+    border: 2px solid #000;
+    border-radius: 0.5rem;
+    margin-top: 0.25rem;
+    padding: 1rem;
+    font-family: cursive;
+    gap: 0.5rem;
+}
+
+.from {
+    font-size: 1.25rem;
+}
+
+.to {
+    font-size: 1.25rem;
+}
+
+.toAndFrom {
+    display: flex;
+    justify-content: space-between;
+}
+
+.duration {
+    font-size: 1rem;
+    align-self: center;
+}
+
+
+@keyframes expand {
+    0% {
+        opacity: 0;
+        height: 0;
+    }
+
+    100% {
+        opacity: 1;
+        height: 100px;
+    }
+}
